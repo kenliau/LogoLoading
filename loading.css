@@ -1,0 +1,94 @@
+
+.fixed-center {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+}
+
+.wave div{
+  height:50px;
+  width:20px;
+  display:inline-block;
+  background-color: #56bc76;
+  border:1px solid #217c99;
+
+
+  -webkit-animation:wave_loader 1.3s linear infinite;
+  animation:wave_loader 1.3s linear infinite;
+
+  -webkit-transform: scale(0.91);
+  transform: scale(0.91);
+}
+
+
+.wave div:nth-child(1){
+  -webkit-animation-delay:0.39s;
+  animation-delay:0.39s;
+}
+.wave div:nth-child(2){
+  -webkit-animation-delay:0.52s;
+  animation-delay:0.52s;
+}
+.wave div:nth-child(3){
+  -webkit-animation-delay:0.65s;
+  animation-delay:0.65s;
+}
+
+@-webkit-keyframes wave_loader{
+  0%{
+    -webkit-transform:scale(1.2);
+    opacity:1;
+    -webkit-transform:rotateY(100deg)  translateZ(-3.5em);
+  }
+
+  100%{
+    -webkit-transform:scale(0.7);
+    opacity:0.1;
+  }
+}
+
+@keyframes wave_loader{
+  0%{
+    transform:scale(1.2);
+    opacity:1;
+    transform:rotateY(100deg)  translateZ(-3.5em);
+  }
+
+  100%{
+    transform:scale(0.7);
+    opacity:0.1;
+  }
+}
+
+/**** BOUNCING ****/
+.bouncing-icon div img
+{
+    width: 50px;
+    height: 50px;
+}
+
+.bouncing-icon div
+{
+    opacity: 0.8;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    -webkit-animation: circlebounce 2.0s infinite ease-in-out;
+    animation: circlebounce 2.0s infinite ease-in-out;
+}
+
+.bouncing-icon div:nth-child(1) {
+    -webkit-animation-delay: -1.0s;
+    animation-delay: -1.0s;
+}
+
+@-webkit-keyframes circlebounce {
+    0%, 100% { -webkit-transform: scale(0.0) }
+    50% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes circlebounce {
+    0%, 100% { transform: scale(0.0); }
+    50% { transform: scale(1.0); }
+}
